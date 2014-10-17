@@ -1,3 +1,6 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -96,10 +99,14 @@ html,body {
 }
 body {
   background: #000;
+  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
 body>header, body>nav, body>section {
   max-width: 1000px;
-  width: 70%;
+  width: 90%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans Narrow', 'Helvetica Neue', Helvetica, sans-serif;
 }
 header {
   margin: 0 auto;
@@ -119,16 +126,22 @@ nav {
   text-align: center;
   letter-spacing: 1px;
   text-shadow: 1px 1px 1px #0E0E0E;
-  box-shadow: 2px 2px 3px #888;
 }
 nav ul {
   padding: 0;
   margin: 0;
 }
+nav>ul li {
+  display: inline-block;
+  color: #333;
+}
 nav a {
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   color: #fff;
   display: block;
+  font-size: .8em;
 }
 nav>ul li a {
   display: block;
@@ -141,17 +154,15 @@ nav>ul li:last-child a {
 nav>ul li a:hover {
   color: #000;
 }
-nav ul:before,
-nav ul:after {
-    content: "";
-    display: table;
-}
 nav li>ul {
   position: absolute;
   z-index: 200;
   box-shadow: 2px 2px 0 #BEBEBE;
   width: 35%;
   display: none;
+}
+nav li ul li {
+  display: block;
 }
 nav li ul li a {
   border-bottom: 1px dotted #ccc;
@@ -176,47 +187,42 @@ nav>ul li:hover a {
   color: #666;
   text-shadow: none;
 }
-nav>ul li:hover>a{
-  color: #000;
-}
 @media only screen and (max-width: 767px) {
-   li {
-    float: none;
+  header {
+    height: 320px;
+    background-size: 100%;
   }
-
-  ul.primary li:hover a {
+  nav a {
+    font-size: .7em;
+  }
+  nav>ul li {
+    display: block;
+  }
+  nav ul li:hover a {
     background: none;
     color: #8B8B8B;
     text-shadow: 1px 1px #000;
   }
-
-  ul.primary li:hover ul {
+  nav ul li:hover ul {
     display: block;
     background: #272727;
     color: #fff;
   }
-
-  ul.sub {
-    display: block;
+  nav ul li ul {
+    display: none;
     position: static;
     box-shadow: none;
     width: 100%;
   }
-
-  ul.sub li a {
+  nav ul li ul li a {
     background: #272727;
   	border: none;
     color: #8B8B8B;
   }
-
-  ul.sub li a:hover {
+  nav ul li ul li a:hover {
     color: #ccc;
     background: none;
   }
-}
-nav>ul li {
-  display: inline-block;
-  color: #333;
 }
 section {
   margin: 0 auto;
@@ -232,7 +238,38 @@ aside {
   bottom: 0;
   position: absolute;
 }
-
+aside .social a {
+  font: 400 1em 'entypo';
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: .5em .3em 0 .3em;
+  margin: .5em 0;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  display: inline-block;
+}
+aside .social .facebook, aside .social .facebook:before {
+  background: #4b70ab;
+  content: "\F30C";
+}
+aside .social .instagram, aside .social .instagram:before {
+  background: #6291b2;
+  content: "\F32D";
+}
+aside .social .twitter, aside .social .twitter:before {
+  background: #32b9e7;
+  content: "\F309";
+}
+aside .social .gplus, aside .social .gplus:before {
+  background: #fa5432;
+  content: "\F30F";
+}
 
 
 
