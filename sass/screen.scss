@@ -1,0 +1,116 @@
+@import "compass";
+// Font weights
+$light: 200;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
+$emsize: 16px;
+$line-height: 1.4;
+
+@include keyframes(fadeIn){
+  0% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@include keyframes(zoomIn){
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@mixin zoomIn($duration: 1s) {
+  @include animation-name(zoomIn);
+  @include animation-duration($duration);
+  @include animation-delay(.5s);
+  @include animation-fill-mode(both);
+}
+@mixin fadeIn($duration: 2s) {
+  @include animation-name(fadeIn);
+  @include animation-duration($duration);
+  @include animation-fill-mode(both);
+}
+html,body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #333;
+  font: $regular $emsize $family;
+  height: 2000px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $family;
+  font-weight: $regular;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    color: #333;
+    @include transition(.2s all);
+  }
+  nav & {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-size: .8em;
+  }
+}
+section {
+  display: none;
+}
+nav {
+  background: #222;
+  box-sizing: border-box;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 200;
+  }
+  ul {
+    width: 100%;
+    margin: 19px 0 0 0;
+  }
+  li {
+    display: inline-block;
+    border-right: 1px solid #555;
+    padding: 0 1em;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+header {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+    div {
+      background: #333 url(../img/20140829_22_00357-2.jpg) no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include fadeIn;
+    }
+    img[src="img/logo.png"] {
+      @include zoomIn;
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+    }
+}
