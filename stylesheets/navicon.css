@@ -1,0 +1,118 @@
+/* line 28, ../sass/navicon.scss */
+.navicon {
+  display: inline-block;
+  margin: 0 1em;
+  border: none;
+  background: none;
+  padding: 1rem 0.5rem;
+  transition: 0.3s;
+  cursor: pointer;
+  user-select: none;
+}
+/* line 37, ../sass/navicon.scss */
+.navicon:focus {
+  outline: none;
+}
+
+/* line 40, ../sass/navicon.scss */
+.navicon__lines {
+  display: inline-block;
+  width: 2rem;
+  height: 0.28571rem;
+  background: #eee;
+  border-radius: 0.14286rem;
+  transition: 0.3s;
+  position: relative;
+}
+/* line 43, ../sass/navicon.scss */
+.navicon__lines:before, .navicon__lines:after {
+  display: inline-block;
+  width: 2rem;
+  height: 0.28571rem;
+  background: #eee;
+  border-radius: 0.14286rem;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  content: '';
+  transform-origin: 0.14286rem center;
+}
+/* line 51, ../sass/navicon.scss */
+.navicon__lines:before {
+  top: 0.5rem;
+}
+/* line 52, ../sass/navicon.scss */
+.navicon__lines:after {
+  top: -0.5rem;
+}
+/* line 54, ../sass/navicon.scss */
+.is--closed .navicon__lines {
+  transform: scale3d(0.8, 0.8, 0.8);
+}
+
+/* line 63, ../sass/navicon.scss */
+.navicon-x.is--closed .navicon__lines {
+  background: transparent;
+}
+/* line 65, ../sass/navicon.scss */
+.navicon-x.is--closed .navicon__lines:before, .navicon-x.is--closed .navicon__lines:after {
+  transform-origin: 50% 50%;
+  top: 0;
+  width: 2rem;
+}
+/* line 71, ../sass/navicon.scss */
+.navicon-x.is--closed .navicon__lines:before {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+/* line 72, ../sass/navicon.scss */
+.navicon-x.is--closed .navicon__lines:after {
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+/* line 82, ../sass/navicon.scss */
+.navicon-x2 .navicon__lines {
+  transition: background .3s .5s ease;
+}
+/* line 84, ../sass/navicon.scss */
+.navicon-x2 .navicon__lines:before, .navicon-x2 .navicon__lines:after {
+  transform-origin: 50% 50%;
+  transition: top .3s .6s ease, transform .3s ease;
+}
+/* line 92, ../sass/navicon.scss */
+.navicon-x2.is--closed .navicon__lines {
+  transition: background .3s 0s ease;
+  background: transparent;
+}
+/* line 95, ../sass/navicon.scss */
+.navicon-x2.is--closed .navicon__lines:before, .navicon-x2.is--closed .navicon__lines:after {
+  transition: top .3s ease, transform .3s .5s ease;
+  top: 0;
+  width: 2rem;
+}
+/* line 101, ../sass/navicon.scss */
+.navicon-x2.is--closed .navicon__lines:before {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+/* line 102, ../sass/navicon.scss */
+.navicon-x2.is--closed .navicon__lines:after {
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+/* line 114, ../sass/navicon.scss */
+.navicon-arrow.is--closed .navicon__lines:before, .navicon-arrow.is--closed .navicon__lines:after {
+  top: 0;
+  width: 1.11111rem;
+}
+/* line 119, ../sass/navicon.scss */
+.navicon-arrow.is--closed .navicon__lines:before {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+/* line 120, ../sass/navicon.scss */
+.navicon-arrow.is--closed .navicon__lines:after {
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+/* line 130, ../sass/navicon.scss */
+.navicon-arrow--up.is--closed {
+  transform: scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, 90deg);
+}

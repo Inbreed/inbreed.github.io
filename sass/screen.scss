@@ -8,6 +8,8 @@ $bold: 600;
 $family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
 $emsize: 16px;
 $line-height: 1.4;
+$white-50: rgba(255,255,255,.5);
+$white-25: rgba(255,255,255,.25);
 
 @include keyframes(fadeIn){
   0% {
@@ -31,6 +33,7 @@ $line-height: 1.4;
   @include animation-duration($duration);
   @include animation-delay(.5s);
   @include animation-fill-mode(both);
+  @include animation-iteration-count(1);
 }
 @mixin fadeIn($duration: 2s) {
   @include animation-name(fadeIn);
@@ -69,7 +72,7 @@ header {
   position: relative;
   overflow: hidden;
     @media screen and (max-device-width: 568px) {
-      height: 60vh;
+      height: 50vh;
     }
     div {
       background: #000 url(../img/20140829_22_00357-2.jpg) no-repeat;
@@ -80,10 +83,17 @@ header {
       @include fadeIn;
     }
     img[src="img/logo.png"] {
-      @include zoomIn;
       margin: 0 auto;
       display: block;
-      max-width: 100%;
+      @media screen and (max-device-width: 568px) {
+        max-width: 100%;
+        opacity: 1;
+        @include transform(scale(1));
+        margin: 6vh auto 0 auto;
+      }
+      @media screen and (min-device-width: 568px) {
+        @include zoomIn;
+      }
     }
 }
 nav {
@@ -94,7 +104,34 @@ nav {
   bottom: 0;
   width: 100%;
   height: 60px;
+  &.open {
+    height: 200px;
+    li {
+      opacity: 1;
+      display: block;
+    }
+  }
+  border-top: 1px solid $white-50;
+  border-bottom: 1px solid $white-50;
+  @include transition(.4s all);
+  button {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    @media screen and (max-device-width: 568px) {
+      display: block;
+      visibility: visible;
+      position: absolute;
+      right: -5px;
+      top: -1px;
+    }
+    @media screen and (min-device-width: 568px) {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
   &.fixed {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid $white-25;
     position: fixed;
     top: 0;
     width: 100%;
@@ -104,21 +141,32 @@ nav {
   ul {
     width: 100%;
     margin: 19px 0 0 0;
+    padding: 0;
   }
   li {
     display: inline-block;
     border-right: 1px solid #555;
     padding: 0 1em;
-    box-shadow: 0 19px 0 #222, 0 20px 0 #222;
+    box-shadow: 0 18px 0 #222, 0 19px 0 #222;
     @include transition(.4s all);
     &:last-child {
       border-right: none;
     }
     &:hover {
-      box-shadow: 0 19px 0 #222, 0 20px 0 transparentize(white, .5);
+      box-shadow: 0 18px 0 #222, 0 19px 0 #fff;
+      @media screen and (max-device-width: 568px) {
+        box-shadow: 0 18px 0 transparent, 0 19px 0 transparent;
+      }
     }
     a {
       color: #fff;
+    }
+    @media screen and (max-device-width: 568px) {
+      display: none;
+      padding: 1em 0;
+      box-shadow: 0 18px 0 transparent, 0 19px 0 transparent;
+      border: 0;
+      opacity: 0;
     }
   }
 }

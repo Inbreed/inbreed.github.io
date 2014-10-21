@@ -1,0 +1,131 @@
+// Navicon Config
+// ===============================================
+
+$navicon-color: #eee;
+$navicon-transition: .3s;
+$navicon-base: 1rem;
+$navicon-space: $navicon-base/4;
+$navicon-size: 2rem;
+$navicon-radius: $navicon-size/14;
+
+
+// Navicon Utilities
+// ===============================================
+
+@mixin navicon_lines {
+  display: inline-block;
+  width: $navicon-size;
+  height: $navicon-size/7;
+  background: $navicon-color;
+  border-radius: $navicon-radius;
+  transition: $navicon-transition;
+}
+
+
+// Navicon Styles
+// ===============================================
+
+.navicon {
+  display: inline-block;
+  margin: 0 1em;
+  border: none;
+  background: none;
+  padding: $navicon-size/2 $navicon-size/4;
+  transition: $navicon-transition;
+  cursor: pointer;
+  user-select: none;
+  &:focus { outline: none; }
+}
+
+.navicon__lines {
+  @include navicon_lines;
+  position: relative;
+  &:before,
+  &:after {
+   @include navicon_lines;
+    position: absolute;
+    left: 0;
+    content: '';
+    transform-origin: $navicon-size/14 center;
+  }
+  &:before { top: $navicon-size/4; }
+  &:after { top: -$navicon-size/4; }
+
+  .is--closed & {transform: scale3d(.8,.8,.8); }
+}
+
+
+// Navicon X
+// ===============================================
+
+.navicon-x {
+  &.is--closed {
+    .navicon__lines {
+      background: transparent;
+      &:before,
+      &:after {
+        transform-origin: 50% 50%;
+        top: 0;
+        width: $navicon-size;
+      }
+      &:before { transform: rotate3d(0, 0, 1, 45deg); }
+      &:after { transform: rotate3d(0, 0, 1, -45deg); }
+    }
+  }
+}
+
+
+// Navicon X2
+// ===============================================
+
+.navicon-x2 {
+  .navicon__lines {
+    transition: background .3s .5s ease;
+    &:before,
+    &:after {
+      transform-origin: 50% 50%;
+      transition: top .3s .6s ease, transform .3s ease;
+    }
+  }
+
+  &.is--closed {
+    .navicon__lines {
+      transition: background .3s 0s ease;
+      background: transparent;
+      &:before,
+      &:after{
+        transition: top .3s ease, transform .3s .5s ease;
+        top:0;
+        width: $navicon-size;
+      }
+      &:before { transform: rotate3d(0,0,1,45deg); }
+      &:after { transform: rotate3d(0,0,1,-45deg); }
+    }
+  }
+}
+
+
+// Navicon Arrow
+// ===============================================
+
+.navicon-arrow {
+  &.is--closed {
+    .navicon__lines {
+      &:before,
+      &:after {
+        top: 0;
+        width: $navicon-size/1.8;
+      }
+      &:before { transform: rotate3d(0,0,1,45deg); }
+      &:after { transform: rotate3d(0,0,1,-45deg); }
+    }
+  }
+}
+
+
+// Navicon Arrow Up
+// ===============================================
+
+.navicon-arrow--up {
+  &.is--closed { transform: scale3d(.8,.8,.8) rotate3d(0, 0, 1,90deg); }
+}
