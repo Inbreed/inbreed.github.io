@@ -152,7 +152,13 @@ header {
   position: relative;
   overflow: hidden;
 }
-/* line 71, ../sass/screen.scss */
+@media screen and (max-device-width: 568px) {
+  /* line 67, ../sass/screen.scss */
+  header {
+    height: 60vh;
+  }
+}
+/* line 74, ../sass/screen.scss */
 header div {
   background: #000 url(../img/20140829_22_00357-2.jpg) no-repeat;
   background-size: cover;
@@ -169,7 +175,7 @@ header div {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-/* line 79, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 header img[src="img/logo.png"] {
   -moz-animation-name: zoomIn;
   -webkit-animation-name: zoomIn;
@@ -188,7 +194,7 @@ header img[src="img/logo.png"] {
   max-width: 100%;
 }
 
-/* line 86, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 nav {
   background: #222;
   box-sizing: border-box;
@@ -198,7 +204,7 @@ nav {
   width: 100%;
   height: 60px;
 }
-/* line 94, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 nav.fixed {
   position: fixed;
   top: 0;
@@ -206,12 +212,12 @@ nav.fixed {
   height: 60px;
   z-index: 200;
 }
-/* line 101, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 nav ul {
   width: 100%;
   margin: 19px 0 0 0;
 }
-/* line 105, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 nav li {
   display: inline-block;
   border-right: 1px solid #555;
@@ -222,20 +228,20 @@ nav li {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 111, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 nav li:last-child {
   border-right: none;
 }
-/* line 114, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 nav li:hover {
   box-shadow: 0 19px 0 #222, 0 20px 0 rgba(255, 255, 255, 0.5);
 }
-/* line 117, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 nav li a {
   color: #fff;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 section {
   display: none;
 }

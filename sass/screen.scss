@@ -68,6 +68,9 @@ header {
   height: 80vh;
   position: relative;
   overflow: hidden;
+    @media screen and (max-device-width: 568px) {
+      height: 60vh;
+    }
     div {
       background: #000 url(../img/20140829_22_00357-2.jpg) no-repeat;
       background-size: cover;
