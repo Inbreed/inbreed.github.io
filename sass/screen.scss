@@ -52,10 +52,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 a {
   text-decoration: none;
-  color: #fff;
+  color: #333;
+  @include transition(.2s all);
   &:hover {
-    color: #333;
-    @include transition(.2s all);
+    color: #999;
   }
   nav & {
     text-transform: uppercase;
@@ -64,8 +64,24 @@ a {
     font-size: .8em;
   }
 }
-section {
-  display: none;
+header {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+    div {
+      background: #000 url(../img/20140829_22_00357-2.jpg) no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include fadeIn;
+    }
+    img[src="img/logo.png"] {
+      @include zoomIn;
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+    }
 }
 nav {
   background: #222;
@@ -90,27 +106,19 @@ nav {
     display: inline-block;
     border-right: 1px solid #555;
     padding: 0 1em;
+    box-shadow: 0 19px 0 #222, 0 20px 0 #222;
+    @include transition(.4s all);
     &:last-child {
       border-right: none;
     }
+    &:hover {
+      box-shadow: 0 19px 0 #222, 0 20px 0 transparentize(white, .5);
+    }
+    a {
+      color: #fff;
+    }
   }
 }
-header {
-  height: 80vh;
-  position: relative;
-  overflow: hidden;
-    div {
-      background: #333 url(../img/20140829_22_00357-2.jpg) no-repeat;
-      background-size: cover;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      @include fadeIn;
-    }
-    img[src="img/logo.png"] {
-      @include zoomIn;
-      margin: 0 auto;
-      display: block;
-      max-width: 100%;
-    }
+section {
+  display: none;
 }
