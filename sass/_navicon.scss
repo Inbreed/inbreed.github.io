@@ -54,30 +54,6 @@ $navicon-radius: $navicon-size/14;
   .is--closed & {transform: scale3d(.8,.8,.8); }
 }
 
-
-// Navicon X
-// ===============================================
-
-.navicon-x {
-  &.is--closed {
-    .navicon__lines {
-      background: transparent;
-      &:before,
-      &:after {
-        transform-origin: 50% 50%;
-        top: 0;
-        width: $navicon-size;
-      }
-      &:before { transform: rotate3d(0, 0, 1, 45deg); }
-      &:after { transform: rotate3d(0, 0, 1, -45deg); }
-    }
-  }
-}
-
-
-// Navicon X2
-// ===============================================
-
 .navicon-x2 {
   .navicon__lines {
     transition: background .3s .5s ease;
@@ -102,30 +78,4 @@ $navicon-radius: $navicon-size/14;
       &:after { transform: rotate3d(0,0,1,-45deg); }
     }
   }
-}
-
-
-// Navicon Arrow
-// ===============================================
-
-.navicon-arrow {
-  &.is--closed {
-    .navicon__lines {
-      &:before,
-      &:after {
-        top: 0;
-        width: $navicon-size/1.8;
-      }
-      &:before { transform: rotate3d(0,0,1,45deg); }
-      &:after { transform: rotate3d(0,0,1,-45deg); }
-    }
-  }
-}
-
-
-// Navicon Arrow Up
-// ===============================================
-
-.navicon-arrow--up {
-  &.is--closed { transform: scale3d(.8,.8,.8) rotate3d(0, 0, 1,90deg); }
 }
