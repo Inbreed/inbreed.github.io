@@ -11,7 +11,7 @@ $line-height: 1.4;
 $white-50: rgba(255,255,255,.5);
 $white-25: rgba(255,255,255,.25);
 
-@include keyframes(fadeIn){
+@include keyframes(fadeIn) {
   0% {
     opacity: .1;
   }
@@ -19,13 +19,24 @@ $white-25: rgba(255,255,255,.25);
     opacity: 1;
   }
 }
-@include keyframes(zoomIn){
+@include keyframes(zoomIn) {
   0% {
     opacity: 0;
-    transform: scale3d(.3, .3, .3);
+    @include transform(scale3d(.3, .3, .3));
   }
   50% {
     opacity: 1;
+  }
+}
+@include keyframes(filter-animation) {
+  0% {
+    @include filter(sepia(1) saturate(1));
+  }
+  50% {
+    @include filter(sepia(1) saturate(3));
+  }
+  100% {
+    @include filter(sepia(1) saturate(1));
   }
 }
 @mixin zoomIn($duration: 1s) {
@@ -40,6 +51,12 @@ $white-25: rgba(255,255,255,.25);
   @include animation-duration($duration);
   @include animation-fill-mode(both);
 }
+@mixin filter-animation($duration: 5s) {
+  @include animation-name(filter-animation);
+  @include animation-duration($duration);
+  @include animation-fill-mode(both);
+  @include animation-iteration-count(infinite);
+}
 html,body {
   margin: 0;
   padding: 0;
@@ -47,7 +64,12 @@ html,body {
 body {
   background: #111 url(../img/background.png);
   font: $regular $emsize $family;
-  height: 2000px;
+  section {
+    margin-bottom: 5em;
+  }
+}
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: $family;
@@ -59,7 +81,7 @@ a {
   color: #333;
   @include transition(.2s all);
   &:hover {
-    color: #999;
+    color: #ff9000;
   }
   nav & {
     text-transform: uppercase;
@@ -81,7 +103,7 @@ header {
       position: absolute;
       width: 100%;
       height: 100%;
-      @include fadeIn;
+      @include filter-animation;
     }
     img[src="img/logo.png"] {
       margin: 0 auto;
@@ -97,6 +119,7 @@ header {
       }
       @media screen and (min-device-width: 568px) {
         @include zoomIn;
+        max-width: 100%;
       }
     }
 }
@@ -199,15 +222,31 @@ section {
   background: url(../img/main.png);
   box-shadow: 0 0 15px #111;
 }
+main.col {
+  @media screen and (min-width: 568px) {
+    width: 70%;
+    padding: 1em 4em 4em;
+  }
+  padding: 1em 4em 0;
+  img.lineup {
+    max-width: 100%;
+    margin: 1em;
+    display: block;
+  }
+}
 aside.col {
   @media screen and (min-width: 568px) {
     width: 30%;
   }
-  padding: 1.6em 2em;
-}
-main.col {
-  @media screen and (min-width: 568px) {
-    width: 70%;
+  padding: 1.6em 4em;
+  span {
+    color: #999;
+    font-size: .8em;
+    margin: -1.3em 0 -1em 0;
+    display: block;
   }
-  padding: 1em 4em 4em;
+}
+.social img:hover {
+  box-shadow: 0 0 3px rgba(27,27,27,.8);
+  @include transition(.4s all);
 }
