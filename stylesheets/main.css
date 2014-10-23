@@ -692,69 +692,30 @@ textarea {
     opacity: 1;
   }
 }
-@-moz-keyframes filter-animation {
-  0% {
-    filter: sepia(1) saturate(1);
-  }
-  50% {
-    filter: sepia(1) saturate(3);
-  }
-  100% {
-    filter: sepia(1) saturate(1);
-  }
-}
-@-webkit-keyframes filter-animation {
-  0% {
-    -webkit-filter: sepia(1) saturate(1);
-    filter: sepia(1) saturate(1);
-  }
-  50% {
-    -webkit-filter: sepia(1) saturate(3);
-    filter: sepia(1) saturate(3);
-  }
-  100% {
-    -webkit-filter: sepia(1) saturate(1);
-    filter: sepia(1) saturate(1);
-  }
-}
-@keyframes filter-animation {
-  0% {
-    -webkit-filter: sepia(1) saturate(1);
-    filter: sepia(1) saturate(1);
-  }
-  50% {
-    -webkit-filter: sepia(1) saturate(3);
-    filter: sepia(1) saturate(3);
-  }
-  100% {
-    -webkit-filter: sepia(1) saturate(1);
-    filter: sepia(1) saturate(1);
-  }
-}
-/* line 60, ../sass/_screen.scss */
+/* line 43, ../sass/_screen.scss */
 html, body {
   margin: 0;
   padding: 0;
 }
 
-/* line 64, ../sass/_screen.scss */
+/* line 47, ../sass/_screen.scss */
 body {
   background: #111 url(../img/background.png);
   font: 400 16px "PT Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
-/* line 67, ../sass/_screen.scss */
+/* line 50, ../sass/_screen.scss */
 body section {
   margin-bottom: 5em;
 }
 
-/* line 74, ../sass/_screen.scss */
+/* line 57, ../sass/_screen.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
 }
 
-/* line 79, ../sass/_screen.scss */
+/* line 62, ../sass/_screen.scss */
 a {
   text-decoration: none;
   color: #333;
@@ -763,11 +724,11 @@ a {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 83, ../sass/_screen.scss */
+/* line 66, ../sass/_screen.scss */
 a:hover {
   color: #ff9000;
 }
-/* line 86, ../sass/_screen.scss */
+/* line 69, ../sass/_screen.scss */
 nav a {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -775,51 +736,39 @@ nav a {
   font-size: .8em;
 }
 
-/* line 93, ../sass/_screen.scss */
+/* line 76, ../sass/_screen.scss */
 header {
   height: 80vh;
   position: relative;
   overflow: hidden;
 }
 @media screen and (max-width: 568px) {
-  /* line 93, ../sass/_screen.scss */
+  /* line 76, ../sass/_screen.scss */
   header {
     height: 50vh;
   }
 }
-/* line 100, ../sass/_screen.scss */
+/* line 83, ../sass/_screen.scss */
 header div {
   background: #000 url(../img/20140829_22_00357-2.jpg) no-repeat;
   background-size: cover;
   position: absolute;
   width: 100%;
   height: 100%;
-  -moz-animation-name: filter-animation;
-  -webkit-animation-name: filter-animation;
-  animation-name: filter-animation;
-  -moz-animation-duration: 5s;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-  -moz-animation-fill-mode: both;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
 }
-/* line 108, ../sass/_screen.scss */
+/* line 90, ../sass/_screen.scss */
 header img[src="img/logo.png"] {
   margin: 0 auto;
   display: block;
 }
 @media screen and (max-device-width: 568px) and (orientation: landscape) {
-  /* line 108, ../sass/_screen.scss */
+  /* line 90, ../sass/_screen.scss */
   header img[src="img/logo.png"] {
     max-width: 70% !important;
   }
 }
 @media screen and (max-device-width: 568px) {
-  /* line 108, ../sass/_screen.scss */
+  /* line 90, ../sass/_screen.scss */
   header img[src="img/logo.png"] {
     max-width: 100%;
     opacity: 1;
@@ -831,7 +780,7 @@ header img[src="img/logo.png"] {
   }
 }
 @media screen and (min-device-width: 568px) {
-  /* line 108, ../sass/_screen.scss */
+  /* line 90, ../sass/_screen.scss */
   header img[src="img/logo.png"] {
     -moz-animation-name: zoomIn;
     -webkit-animation-name: zoomIn;
@@ -852,7 +801,7 @@ header img[src="img/logo.png"] {
   }
 }
 
-/* line 126, ../sass/_screen.scss */
+/* line 108, ../sass/_screen.scss */
 nav {
   background: #222;
   box-sizing: border-box;
@@ -869,21 +818,21 @@ nav {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 137, ../sass/_screen.scss */
+/* line 119, ../sass/_screen.scss */
 nav.open {
   height: 240px;
 }
-/* line 139, ../sass/_screen.scss */
+/* line 121, ../sass/_screen.scss */
 nav.open li {
   opacity: 1;
   display: block;
 }
-/* line 143, ../sass/_screen.scss */
+/* line 125, ../sass/_screen.scss */
 nav.open button:before {
   opacity: 0;
 }
 @media screen and (min-device-width: 568px) {
-  /* line 149, ../sass/_screen.scss */
+  /* line 131, ../sass/_screen.scss */
   nav.fixed {
     border-top: 1px solid transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -894,13 +843,13 @@ nav.open button:before {
     z-index: 200;
   }
 }
-/* line 159, ../sass/_screen.scss */
+/* line 141, ../sass/_screen.scss */
 nav button {
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
 }
 @media screen and (max-device-width: 568px) {
-  /* line 159, ../sass/_screen.scss */
+  /* line 141, ../sass/_screen.scss */
   nav button {
     display: block;
     visibility: visible;
@@ -910,13 +859,13 @@ nav button {
   }
 }
 @media screen and (min-device-width: 568px) {
-  /* line 159, ../sass/_screen.scss */
+  /* line 141, ../sass/_screen.scss */
   nav button {
     display: none !important;
     visibility: hidden;
   }
 }
-/* line 173, ../sass/_screen.scss */
+/* line 155, ../sass/_screen.scss */
 nav button:before {
   content: 'Meny';
   display: inline-block;
@@ -932,13 +881,13 @@ nav button:before {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 186, ../sass/_screen.scss */
+/* line 168, ../sass/_screen.scss */
 nav ul {
   width: 100%;
   margin: 19px 0 0 0;
   padding: 0;
 }
-/* line 191, ../sass/_screen.scss */
+/* line 173, ../sass/_screen.scss */
 nav li {
   display: inline-block;
   border-right: 1px solid #555;
@@ -949,26 +898,26 @@ nav li {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 197, ../sass/_screen.scss */
+/* line 179, ../sass/_screen.scss */
 nav li:last-child {
   border-right: none;
 }
-/* line 200, ../sass/_screen.scss */
+/* line 182, ../sass/_screen.scss */
 nav li:hover {
   box-shadow: 0 18px 0 #222, 0 19px 0 #fff;
 }
 @media screen and (max-device-width: 568px) {
-  /* line 200, ../sass/_screen.scss */
+  /* line 182, ../sass/_screen.scss */
   nav li:hover {
     box-shadow: 0 18px 0 transparent, 0 19px 0 transparent;
   }
 }
-/* line 206, ../sass/_screen.scss */
+/* line 188, ../sass/_screen.scss */
 nav li a {
   color: #fff;
 }
 @media screen and (max-device-width: 568px) {
-  /* line 191, ../sass/_screen.scss */
+  /* line 173, ../sass/_screen.scss */
   nav li {
     display: none;
     padding: 1em 0;
@@ -978,7 +927,7 @@ nav li a {
   }
 }
 
-/* line 218, ../sass/_screen.scss */
+/* line 200, ../sass/_screen.scss */
 section {
   width: 90%;
   max-width: 1400px;
@@ -987,35 +936,35 @@ section {
   box-shadow: 0 0 15px #111;
 }
 
-/* line 225, ../sass/_screen.scss */
+/* line 207, ../sass/_screen.scss */
 main.col {
   padding: 1em 4em 0;
 }
 @media screen and (min-width: 568px) {
-  /* line 225, ../sass/_screen.scss */
+  /* line 207, ../sass/_screen.scss */
   main.col {
     width: 70%;
     padding: 1em 4em 4em;
   }
 }
-/* line 231, ../sass/_screen.scss */
+/* line 213, ../sass/_screen.scss */
 main.col img.lineup {
   max-width: 100%;
   margin: 1em;
   display: block;
 }
 
-/* line 237, ../sass/_screen.scss */
+/* line 219, ../sass/_screen.scss */
 aside.col {
   padding: 1.6em 4em;
 }
 @media screen and (min-width: 568px) {
-  /* line 237, ../sass/_screen.scss */
+  /* line 219, ../sass/_screen.scss */
   aside.col {
     width: 30%;
   }
 }
-/* line 242, ../sass/_screen.scss */
+/* line 224, ../sass/_screen.scss */
 aside.col span {
   color: #999;
   font-size: .8em;
@@ -1023,7 +972,7 @@ aside.col span {
   display: block;
 }
 
-/* line 249, ../sass/_screen.scss */
+/* line 231, ../sass/_screen.scss */
 .social img:hover {
   box-shadow: 0 0 3px rgba(27, 27, 27, 0.8);
   -moz-transition: all 0.4s;
