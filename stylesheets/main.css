@@ -750,7 +750,7 @@ header {
 }
 /* line 83, ../sass/_screen.scss */
 header div {
-  background: #000 url(../img/20140829_22_00357-2.jpg) no-repeat;
+  background: #000 url(../img/header.jpg) no-repeat;
   background-size: cover;
   position: absolute;
   width: 100%;
