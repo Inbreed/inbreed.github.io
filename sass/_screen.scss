@@ -64,7 +64,7 @@ a {
   color: #333;
   @include transition(.2s all);
   &:hover {
-    color: #ff9000;
+    color: #52e100;
   }
   nav & {
     text-transform: uppercase;
