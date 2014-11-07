@@ -27,3 +27,10 @@
   @include animation-duration($duration);
   @include animation-fill-mode(both);
 }
+@mixin filter-shadow($x: 0px, $y: 0px, $r: 10px, $rgba: rgba(0,0,0,.5)) {
+  -webkit-filter: drop-shadow($x $y $r $rgba);
+  -moz-filter: drop-shadow($x $y $r $rgba);
+  -ms-filter: drop-shadow($x $y $r $rgba);
+  -o-filter: drop-shadow($x $y $r $rgba);
+  filter: drop-shadow($x $y $r $rgba);
+}

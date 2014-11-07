@@ -1,4 +1,4 @@
-@import "animations";
+@import "effects";
 @import "variables";
 
 @function calc-em($target-px, $context) {
@@ -72,6 +72,27 @@ header {
 section {
   background: url(../img/main.png);
   box-shadow: 0 0 15px #111;
+  .front {
+    background: url(../img/front_background.jpg) 0/100%;
+    margin-top: gutter()*2 !important;
+    margin-bottom: gutter()*2;
+    text-align: center;
+    @include filter-shadow;
+    img {
+      @include filter-shadow;
+    }
+    img.l {
+      margin: gutter()*4;
+    }
+    img.m {
+      margin: gutter()*2;
+      @include filter(blur(20px));
+    }
+    img.s {
+      margin: gutter();
+      @include filter(blur(20px));
+    }
+  }
 }
 main {
 
@@ -79,15 +100,12 @@ main {
 * img {
   max-width: 100%;
 }
-aside {
-  span {
-    color: #999;
-    font-size: .8em;
-    margin: -1.3em 0 -1em 0;
-    display: block;
+footer {
+  .social img {
+    margin: 0 .5em;
   }
-}
-.social img:hover {
-  box-shadow: 0 0 3px rgba(27,27,27,.8);
-  @include transition(.4s all);
+  .social img:hover {
+    box-shadow: 0 0 3px rgba(27,27,27,.8);
+    @include transition(.4s all);
+  }
 }
