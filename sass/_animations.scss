@@ -1,0 +1,29 @@
+@include keyframes(fadeIn) {
+  0% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@include keyframes(zoomIn) {
+  0% {
+    opacity: 0;
+    @include transform(scale3d(.3, .3, .3));
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@mixin zoomIn($duration: 1s) {
+  @include animation-name(zoomIn);
+  @include animation-duration($duration);
+  @include animation-delay(.5s);
+  @include animation-fill-mode(both);
+  @include animation-iteration-count(1);
+}
+@mixin fadeIn($duration: 2s) {
+  @include animation-name(fadeIn);
+  @include animation-duration($duration);
+  @include animation-fill-mode(both);
+}

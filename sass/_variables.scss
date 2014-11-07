@@ -1,0 +1,16 @@
+// VARIABLES
+$container-max-width: 87.5em;
+$container-width: 90%;
+$column-height: 15em;
+$column-inside-height: $column-height*.912;
+
+// Font weights
+$light: 200;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
+$line-height: 1.4;
+$white-50: rgba(white,.5);
+$white-25: rgba(white,.25);
