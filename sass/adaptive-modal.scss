@@ -279,3 +279,18 @@
   -o-animation-name: scaleHide;
   animation-name: scaleHide;
 }
+
+@media screen and (max-width: 568px) {
+  .am-expanded.am-modal {
+    margin-left: -66%;
+    width: 100%;
+    top: 0;
+  }
+  .am-expanded.am-back {
+    width: 70%;
+  }
+  .am-modal-content img {
+    margin: 3em 0em 1em 0em;
+    float: none;
+  }
+}
