@@ -64,3 +64,8 @@ body>section {
 .one {
   @include span(3 of 12);
 }
+@media screen and (max-width: 568px) {
+  .three, .two, .one {
+    @include span(12 of 12);
+  }
+}

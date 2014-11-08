@@ -10,6 +10,7 @@
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/adaptive-modal.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -44,10 +45,22 @@
         <section>
           <main class="col four">
             <div class="col four front">
-              <img src="img/lineup/inaudible.png" class="l">
-              <img src="img/lineup/sterbhaus.png" class="m">
+              <a href="#inaudible" data-toggle="adaptive-modal">
+                <img src="img/lineup/inaudible.png" class="l">
+              </a>
+              <a href="#sterbhaus" data-toggle="adaptive-modal">
+                <img src="img/lineup/sterbhaus.png" class="m">
+              </a>
               <img src="img/lineup/ironmaiden.png" class="m">
+              <a href="#oceantoburn" data-toggle="adaptive-modal">
+                <img src="img/lineup/oceantoburn.png" class="s">
+              </a>
+              <img src="img/lineup/ironmaiden.png" class="s">
               <img src="img/lineup/oceantoburn.png" class="s">
+              <img src="img/lineup/sterbhaus.png" class="xs">
+              <img src="img/lineup/oceantoburn.png" class="xs">
+              <img src="img/lineup/sterbhaus.png" class="xs">
+              <img src="img/lineup/ironmaiden.png" class="xs">
             </div>
           </main>
           <footer class="col four">
@@ -63,12 +76,33 @@
           </footer>
         </section>
 
+        <div class="modals">
+          <div id="inaudible">
+            <img src="img/lineup/inaudible.jpg">
+            <h1>Inaüdible</h1>
+            <p>Värdbandet, husbandet &ndash; början och slutet. Det var en sjukt varm sommarkväll 2009 som bandet kläckte idén om en egen festival, som senare blev Inbreed Open Air.</p>
+            <p>Anledningen: ”om vi har en egen festival så kommer vi alltid att få spela, oavsett hur mycket bättre alla andra band är.” Bandet spelar vad de kallar ”rock and/or roll” &ndash; en kombination av rock, metal och punk &ndash; och har i nuvarande sättning funnits i drygt två år.</p>
+            <p>Det här vill ni inte missa!</p>
+          </div>
+          <div id="sterbhaus">
+            <img src="img/lineup/sterbhaus.jpg">
+            <h1>Sterbhaus</h1>
+            <p>Ren och skär metal, utan att för den delen vara varken särskilt retro eller särskilt modernt. Ja, det kan nog summera Sterbhaus ganska bra.</p>
+            <p>Ta och blanda de fyra grundstenarna i metal: thrash, death, black, och heavy metal, och vi skojar verkligen inte, då får du fram denna kvartett från Stockholm. Det är galet potent, passionerat, rakt på sak, och helt tidlöst. Och det är minsann sällsynt i dagsläget.</p>
+          </div>
+          <div id="oceantoburn">
+            <img src="img/lineup/oceantoburn.jpg">
+            <h1>Ocean to Burn</h1>
+            <p>Ur Svartåns mynning i Västerås har det spolats ut en hel del skit. Detta dundrande ånglok kan man däremot sätta i en helt egen kategori. Dessa grabbar har under 3 år svetsats samman av den djupa bluesen och den tyngsta rocken tillsammans med en hel drös andra influenser, och har grovslipat sitt sound till något utöver det vanliga.</p>
+            <p>Med en EP i bagaget och siktet inställt på ett studioalbum så kommer de nu för att visa vad de är kapabla till. Håll i hatten och snöra skorna &ndash; här utlovas det ös!</p>
+          </div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/vendor/jquery.backstretch.min.js"></script>
-        <script src="js/vendor/sscr.min.js"></script>
+        <script src="js/vendor/jquery.adaptive-modal.min.js"></script>
         <script src="js/vendor/prefixfree.min.js"></script>
+        <script src="js/vendor/sscr.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

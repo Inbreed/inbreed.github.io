@@ -77,22 +77,41 @@ section {
     margin-top: gutter()*2 !important;
     margin-bottom: gutter()*2;
     text-align: center;
-    @include filter-shadow;
+    @include filter-shadow(0,10px,5px,rgba(0,0,0,.3));
     img {
       @include filter-shadow;
+      display: inline-block;
+      max-width: 95%;
+      cursor: pointer;
+      @include transition(.1s all);
+      &:hover {
+        @include filter-shadow-color;
+      }
     }
     img.l {
       margin: gutter()*4;
+      width: span(12);
     }
     img.m {
-      margin: gutter()*2;
-      @include filter(blur(20px));
+      margin: gutter() 0 gutter() gutter();
+      width: span(6);
     }
     img.s {
-      margin: gutter();
-      @include filter(blur(20px));
+      margin: gutter() 0 gutter() gutter();
+      width: span(4);
+    }
+    img.xs {
+      margin: gutter() 0 gutter() gutter();
+      width: span(3);
     }
   }
+}
+.modals {
+  display: none;
+}
+.am-modal-content img {
+  margin: 3em 0px 2em 2em;
+  float: right;
 }
 main {
 
