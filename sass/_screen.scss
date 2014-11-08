@@ -120,11 +120,15 @@ main {
   max-width: 100%;
 }
 footer {
-  .social img {
-    margin: 0 .5em;
-  }
-  .social img:hover {
-    box-shadow: 0 0 3px rgba(27,27,27,.8);
-    @include transition(.4s all);
+  min-height: 2.5em !important;
+  .social {
+    min-height: 1em !important;
+    img {
+      margin: 0 .5em;
+    }
+    img:hover {
+      box-shadow: 0 0 3px rgba(27,27,27,.8);
+      @include transition(.4s all);
+    }
   }
 }

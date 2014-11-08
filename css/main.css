@@ -369,9 +369,13 @@ section .front img.xs { margin: 0.83333% 0 0.83333% 0.83333%; width: 23.33333%; 
 /* line 119, ../sass/_screen.scss */
 * img { max-width: 100%; }
 
-/* line 123, ../sass/_screen.scss */
-footer .social img { margin: 0 .5em; }
+/* line 122, ../sass/_screen.scss */
+footer { min-height: 2.5em !important; }
+/* line 124, ../sass/_screen.scss */
+footer .social { min-height: 1em !important; }
 /* line 126, ../sass/_screen.scss */
+footer .social img { margin: 0 .5em; }
+/* line 129, ../sass/_screen.scss */
 footer .social img:hover { box-shadow: 0 0 3px rgba(27, 27, 27, 0.8); -moz-transition: all 0.4s; -o-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s; }
 
 /* line 28, ../sass/_navicon.scss */
