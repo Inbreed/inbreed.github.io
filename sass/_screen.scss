@@ -40,7 +40,7 @@ header {
   position: relative;
   overflow: hidden;
     @media screen and (max-width: 568px) {
-      height: 50vh;
+      height: 60vh;
     }
     div {
       background: #000 url(../img/header.jpg) no-repeat;
@@ -85,24 +85,26 @@ section {
       cursor: pointer;
       @include transition(.1s all);
       &:hover {
-        @include filter-shadow-color;
+        @media screen and (min-width: 568px) {
+          @include filter-shadow-color;
+        }
       }
     }
     img.l {
       margin: gutter()*4;
-      width: span(12);
+      width: span(4 of 4);
     }
     img.m {
       margin: gutter() 0 gutter() gutter();
-      width: span(6);
+      width: span(2 of 4);
     }
     img.s {
       margin: gutter() 0 gutter() gutter();
-      width: span(4);
+      width: span(3 of 9);
     }
     img.xs {
       margin: gutter() 0 gutter() gutter();
-      width: span(3);
+      width: span(2 of 8);
     }
   }
 }

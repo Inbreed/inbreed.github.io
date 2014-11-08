@@ -31,3 +31,15 @@ var navicon = document.querySelectorAll('.navicon');
     }
   }
 });
+/*
+$(function(){
+  $.getJSON('http://raw.githubusercontent.com/Inbreed/inbreed-android/master/www/test.json',function(data){
+    console.log('success');
+    $.each(data.bands,function(i,band){
+      $('.modals').append('<div>"'+band.name+' '+band.img+' '+band.desc+' '+band.time+'</div>');
+    });
+  }).error(function(){
+    console.log('error');
+  });
+});
+*/
