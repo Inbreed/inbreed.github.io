@@ -8,11 +8,11 @@
 html,body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 body {
   background: #111 url(../img/background.png);
   font: $regular 100% $family;
-  overflow-x: hidden;
   section {
     margin-bottom: 5em;
   }
