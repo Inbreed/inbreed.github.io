@@ -10,15 +10,25 @@
   z-index: 1;
   @include transform(rotate(45deg));
   @include box-shadow(0 0 10px #888);
-}
-.ribbon a {
-  border: 1px solid #faa;
-  color: #fff;
-  display: block;
-  font: bold 81.25% $family;
-  margin: 1px 0;
-  padding: 10px 50px;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 0 5px #444;
+  a {
+    border: 1px solid #faa;
+    color: #fff;
+    display: block;
+    font: bold 81.25% $family;
+    margin: 1px 0;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 5px #444;
+  }
+  @media screen and (max-device-width: 568px) {
+    top: 200px;
+    right: 50%;
+    background: transparent;
+    @include transform(rotate(0deg));
+    @include box-shadow(none);
+    a {
+      border: 0;
+    }
+  }
 }
