@@ -25,7 +25,7 @@
     top: 200px;
     right: 50%;
     background: transparent;
-    @include transform(rotate(0deg));
+    @include transform(rotate(0deg) translateX(50%));
     @include box-shadow(none);
     a {
       border: 0;
