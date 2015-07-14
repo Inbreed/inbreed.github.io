@@ -27,6 +27,7 @@
     background: transparent;
     @include transform(rotate(0deg) translateX(50%));
     @include box-shadow(none);
+    z-index: 199;
     a {
       border: 0;
     }
