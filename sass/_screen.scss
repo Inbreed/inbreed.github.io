@@ -109,6 +109,15 @@ section {
     }
   }
 }
+.volunteer {
+    p {
+        text-align: center;
+        font-size: .8em;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
 .modals {
   display: none;
 }
